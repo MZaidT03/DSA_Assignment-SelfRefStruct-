@@ -86,10 +86,21 @@ int main(){
     }
 
     // Find 40 in Path B 
+    ptr = start;
+    int i = 0;
+    while(i<3){
+        if(ptr->data == 40){
+            cout<<"40 Founded at: "<<ptr<<endl;
+            break;
+        }
+        ptr = ptr->ptr2;
+        i++;
+    }
     ptr = start->ptr2->ptr2->ptr1;
     while(ptr!=nullptr){
         if(ptr->data == 40){
             cout<<"40 Founded at: "<<ptr<<endl;
+            break;
         }
         ptr = ptr->ptr1;
     }
