@@ -43,14 +43,14 @@ int main(){
     start->ptr2->ptr1->ptr2 = nullptr;
 
     //start to Ptr2 to ptr1 to ptr1
-    start->ptr2->ptr1->ptr1->ptr1->data = 30;
-    start->ptr2->ptr1->ptr1->ptr1->ptr1 = nullptr;
-    start->ptr2->ptr1->ptr1->ptr1->ptr2 = new Node;
+    start->ptr2->ptr1->ptr1->data = 30;
+    start->ptr2->ptr1->ptr1->ptr1 = nullptr;
+    start->ptr2->ptr1->ptr1->ptr2 = new Node;
     
     //
-    start->ptr2->ptr1->ptr1->ptr1->ptr2->data = 60;
-    start->ptr2->ptr1->ptr1->ptr1->ptr2->ptr1 = nullptr;
-    start->ptr2->ptr1->ptr1->ptr1->ptr2->ptr2 = nullptr;
+    start->ptr2->ptr1->ptr1->ptr2->data = 60;
+    start->ptr2->ptr1->ptr1->ptr2->ptr1 = nullptr;
+    start->ptr2->ptr1->ptr1->ptr2->ptr2 = nullptr;
 
     // start ptr2 to ptr2
 
@@ -65,7 +65,7 @@ int main(){
 
     cout<<start->data<<endl;
     cout<<start->ptr2->data<<endl;
-    Node *ptr = start->ptr2;
+    Node *ptr = start->ptr2->ptr1;
     while(ptr!=nullptr){
         cout<<ptr->data<<endl;
         ptr = ptr->ptr1;
