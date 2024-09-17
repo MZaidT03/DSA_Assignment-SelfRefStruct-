@@ -66,8 +66,8 @@ int main(){
     cout<<start->data<<endl;
     cout<<start->ptr2->data<<endl;
     Node *ptr = start->ptr2;
-//     while(ptr!=nullptr){
-//         cout<<ptr->data<<endl;
-//         ptr = ptr->ptr1;
-//     }
+    while(ptr!=nullptr){
+        cout<<ptr->data<<endl;
+        ptr = ptr->ptr1;
+    }
 }
