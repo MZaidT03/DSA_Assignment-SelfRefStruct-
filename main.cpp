@@ -63,11 +63,34 @@ int main(){
     start->ptr2->ptr2->ptr2->ptr2 = nullptr;
 
 
+
+    // Print The Path A
+    cout<<"Path A"<<endl;
     cout<<start->data<<endl;
     cout<<start->ptr2->data<<endl;
     Node *ptr = start->ptr2->ptr1;
     while(ptr!=nullptr){
         cout<<ptr->data<<endl;
+        ptr = ptr->ptr1;
+    }
+
+    // Print Path B 
+    cout<<"Path B"<<endl;
+    cout<<start->data<<endl;
+    cout<<start->ptr2->data<<endl;
+    cout<<start->ptr2->ptr2->data<<endl;
+    ptr = start->ptr2->ptr2->ptr1;
+    while(ptr!=nullptr){
+        cout<<ptr->data<<endl;
+        ptr = ptr->ptr1;
+    }
+
+    // Find 40 in Path B 
+    ptr = start->ptr2->ptr2->ptr1;
+    while(ptr!=nullptr){
+        if(ptr->data == 40){
+            cout<<"40 Founded at: "<<ptr<<endl;
+        }
         ptr = ptr->ptr1;
     }
 }
